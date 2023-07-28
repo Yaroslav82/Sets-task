@@ -1,21 +1,15 @@
 package tasks;
 
-import service.DataService;
-import utils.Printer;
-
 import java.util.Set;
 
-public class Task_01 {
+public class Task_01 extends Task {
 
     public static void main(String[] args) {
-        Set<String> data = DataService.getData();
-        Printer<String> printer = new Printer<>();
-        printer.print("Initial data", data);
-        updateData(data);
-        printer.print("Updated data", data);
+        Task task = new Task_01();
+        task.start();
     }
 
-    private static void updateData(Set<String> data) {
+    public void updateData(Set<String> data) {
         data.add("grape");
     }
 }
