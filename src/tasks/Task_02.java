@@ -1,14 +1,14 @@
 package tasks;
 
+import service.DataService;
 import utils.Printer;
 
-import java.util.HashSet;
 import java.util.Set;
 
 public class Task_02 {
 
     public static void main(String[] args) {
-        Set<String> data = getData();
+        Set<String> data = DataService.getData();
         Printer<String> printer = new Printer<>();
         printer.print("Initial data", data);
         updateData(data);
@@ -17,9 +17,5 @@ public class Task_02 {
 
     private static void updateData(Set<String> data) {
         data.remove("kiwi");
-    }
-
-    private static HashSet<String> getData() {
-        return new HashSet<>(Set.of("orange", "apple", "kiwi", "strawberry", "mango"));
     }
 }
