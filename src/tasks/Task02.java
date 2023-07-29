@@ -2,7 +2,7 @@ package tasks;
 
 import java.util.Set;
 
-public class Task_02 extends Task {
+public class Task02 extends Task {
 
     public void updateData(Set<String> data) {
         // В методі removeIf ми проходимося циклом по всьому Set.
