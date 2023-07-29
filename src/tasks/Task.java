@@ -1,6 +1,6 @@
 package tasks;
 
-import service.DataService;
+import service.DataProvider;
 import utils.Printer;
 
 import java.util.Set;
@@ -8,7 +8,7 @@ import java.util.Set;
 public abstract class Task implements DataUpdater {
 
     public void start() {
-        Set<String> data = DataService.getData();
+        Set<String> data = DataProvider.getData();
         Printer<String> printer = new Printer<>();
         printer.print("Initial data", data);
         updateData(data);
